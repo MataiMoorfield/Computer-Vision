@@ -17,10 +17,10 @@ Computer vision is a branch of computer science that powers machines to see, rec
 # How does Computer Vision Work?
 
 <aside>
-👁️ Computer vision primarily uses pattern recognition techniques to self-train and understand data.
+Computer vision primarily uses pattern recognition techniques to self-train and understand data.
 
 </aside>
-
+<br />
 
 
 Computer vision algorithms are trained by using a lot of visual data. The model process these images and finds patterns. “For example, If we send a million pictures of vegetable images to a model to train, it will analyse them and create an Engine (Computer Vision Model) based on patterns that are similar to all vegetables. As a result, Our Model will be able to accurately detect whether a particular image is a Vegetables every time we send it.” (Dharmaraj, Mar. 2022).
