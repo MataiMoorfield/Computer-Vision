@@ -4,11 +4,10 @@ import math
 import tkinter as tk
 from PIL import Image, ImageTk
 
-# Create a GUI window
+# GUI window
 root = tk.Tk()
 root.title("Object Detection")
 
-# Create a label to display the webcam feed
 label = tk.Label(root)
 label.pack()
 
