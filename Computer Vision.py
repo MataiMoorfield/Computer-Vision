@@ -63,35 +63,35 @@ def update_frame():
             bg_color = (255, 0, 255)  # Purple color for background
             thickness = 2        # Increased thickness for boldness
 
-            # Get text size to create a background rectangle
+            # background rectangle
             text_size = cv2.getTextSize(text, font, fontScale, thickness)[0]
             text_width = text_size[0]
             text_height = text_size[1]
 
-            # Calculate the coordinates for the background rectangle
+            # coordinates for the background rectangle
             bg_x1 = x1
             bg_y1 = y1 - text_height - 5
             bg_x2 = x1 + text_width + 10
             bg_y2 = y1 - 3
 
-            # Draw background rectangle and text
+            # background rectangle and text
             cv2.rectangle(img, (bg_x1, bg_y1), (bg_x2, bg_y2), bg_color, -1)  # Filled rectangle
             cv2.putText(img, text, (x1 + 5, y1 - 5), font, fontScale, color, thickness)
 
-    # Convert the OpenCV image to a format compatible with Tkinter
+    # convert the OpenCV image to a format compatible with GUI
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img = Image.fromarray(img)
     img_tk = ImageTk.PhotoImage(image=img)
 
-    # Update the label with the new frame
+    # update the label with the new frame
     label.img = img_tk
     label.config(image=img_tk)
-    label.after(1, update_frame)  # Reduced delay for higher frame rate
+    label.after(1, update_frame)  # reduced delay for higher frame rate
 
-# Start updating the frame
+# start updating the frame
 update_frame()
 
-# Run the GUI event loop
+# run the GUI event loop
 root.mainloop()
 
 cap.release()
